@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            position: relative;
+        }
+        #traingle{
+            width: 230px ;
+            display: flex;
+            align-self: center;
+            margin: auto;
+        }
+        body{
+            background-color:red ;
+        }
+        input::placeholder{
+            text-align: center;
+            font-weight: bold;
+            color: black;
+        }
+        input{  width: 40px; }
+        #bInput{ left: 380px; top: 20px; }
+        #aInput {left :307px; top: -100px;}
+        #button{ width: 70px;}
+        #result{
+            width: 40px; background-color: aliceblue;
+            text-align: center; position: relative;
+            font-weight: bold; font-family: sans-serif;
+           left: 450px;bottom: 150px;
+        }
+        #heading{ color: aliceblue; text-align: center;}
+
+    </style>
+</head>
+<body>
+    <h1 id="heading"> مبرهنة فيثاغورث <br/> الحاسبة</h1>
+<div id="container" >
+    <img id="traingle" src="Screenshot 2023-09-18 203132.png" />
+    <input placeholder="A" id="aInput">
+    <input placeholder="B" id="bInput" >
+
+    <div id="result"></div>
+    <button id="button"> احسب</button>    
+
+</div>
+
+<script>
+
+    var button= document.getElementById("button")
+    function clacHypno(){
+        var a = document.getElementById("aInput").value
+        var b = document.getElementById("bInput").value
+        var result = document.getElementById("result")
+        var hyp= Math.round(Math.sqrt((a*a)+(b*b)))
+        result.innerHTML=hyp
+    }
+button.addEventListener('click',clacHypno)
+
+</script>
+
+</body>
+</html>
